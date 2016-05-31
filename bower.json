@@ -9,7 +9,12 @@
     "angular-toastr": "~1.5.0",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.5.3"
+    "angular": "~1.5.3",
+    "angular-animate": "*",
+    "angular-slick-carousel": "*",
+    "ng-ckeditor": "*",
+    "ckeditor": "*",
+    "d3": "*"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -20,6 +25,21 @@
         "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "jquery": {
+      "main": [
+        "dist/jquery.min.js"
+      ]
+    },
+    "angular-ui-router": {
+      "main": [
+        "release/angular-ui-router.min.js"
+      ]
+    },
+    "angular": {
+      "main": [
+        "angular.min.js"
       ]
     }
   },

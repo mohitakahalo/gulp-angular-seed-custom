@@ -3,8 +3,7 @@
 var path = require('path');
 var gulp = require('gulp');
 var conf = require('./conf');
-
-var browserSync = require('browser-sync');
+var connect = require('gulp-connect');
 
 var $ = require('gulp-load-plugins')();
 
@@ -13,7 +12,7 @@ var _ = require('lodash');
 
 gulp.task('styles-reload', ['styles'], function() {
   return buildStyles()
-    .pipe(browserSync.stream());
+    .pipe(connect.reload());
 });
 
 gulp.task('styles', function() {
@@ -27,6 +26,7 @@ var buildStyles = function() {
 
   var injectFiles = gulp.src([
     path.join(conf.paths.src, '/sass/**/*.scss'),
+    path.join(conf.paths.src, '/sass/libs/**/*.scss'),
     path.join('!' + conf.paths.src, '/sass/index.scss')
   ], { read: false });
 

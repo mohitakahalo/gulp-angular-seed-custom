@@ -7,9 +7,9 @@
 
   function env() {
     return {
-      environment: 'test',
-      platformHost: 'http://007.testisbest.webapp',
-      platformPort: 8000
+      environment: 'dev',
+      platformHost: 'http://23.20.230.178',
+      platformPort: 80
     }
   }
 

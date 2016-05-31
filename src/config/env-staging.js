@@ -7,9 +7,9 @@
 
   function env() {
     return {
-      environment: 'local',
-      platformHost: 'http://localhost',
-      platformPort: 8000
+      environment: 'staging',
+      platformHost: 'http://23.20.141.47',
+      platformPort: 80
     }
   }
 

@@ -14,17 +14,25 @@ var gutil = require('gulp-util');
 exports.paths = {
   src: 'src',
   dist: 'dist',
-  tmp: '.tmp',
-  e2e: 'e2e'
+  tmp: '.tmp'
+};
+
+/**
+ *  The host ips to switch for different environments (used in gulp connect)
+ */
+exports.hosts = {
+  dev: '23.20.230.178',
+  staging: '23.20.141.47',
+  prod: 'www.tribe.com'
 };
 
 /**
  *  Constants used for switching build environment context
  */
 exports.constants = {
-  ENV_LOCAL: 'local',
-  ENV_PROD: 'prod',
-  ENV_TEST: 'test',
+  ENV_DEV: 'dev',
+  ENV_STAGING: 'staging',
+  ENV_PROD: 'prod'
 };
 
 /**

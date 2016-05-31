@@ -1,0 +1,33 @@
+<div class="login-modal">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="closeLoginModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title" id="credentialsModal">LOG IN</h4>
+  </div>
+  <div class="modal-body">
+    <div class="error-block">
+    </div>
+    <form id="login-form" ng-submit="submitLoginForm()" class="log-in-form">
+      <div class="input-container">
+        <div class="field-container">
+            <img src="/images/landingPage/email_icon.png"/>
+            <input type="email" name="email" ng-model="loginData.email" required placeholder="Email"/>
+        </div>
+        <div class="field-container">
+            <img src="/images/landingPage/password_icon.png"/>
+            <input type="password" name="password" ng-model="loginData.password" required placeholder="Password"/>
+        </div>
+      </div>
+      <div class="login-button-container">
+        <button class="btn btn-default" type="submit">Log in</button>
+      </div>
+      <div class="forgot-password">
+        <span>Forgot Password?</span>
+      </div>
+      <div class="sign-up-info">
+        <span> Don't have an account? <span class="sign-up-link"><a ng-click="goToSignUp()"> Sign Up</a></span></span> 
+      </div>
+    </form>
+  </div>
+</div>

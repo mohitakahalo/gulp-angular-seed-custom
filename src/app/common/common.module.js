@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('common', ['services']);
+    .module('common', []);
 
 })();

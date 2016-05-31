@@ -26,26 +26,30 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
  *  Default task clean temporaries directories and launch the
  *  main optimization build task
  */
-gulp.task('setLocalEnv', function() {
-    return process.env.NODE_ENV = constants.ENV_LOCAL;
+gulp.task('set-dev-env', function() {
+  return process.env.NODE_ENV = constants.ENV_DEV;
 });
 
-gulp.task('setProdEnv', function() {
-    return process.env.NODE_ENV = constants.ENV_PROD;
+gulp.task('set-staging-env', function() {
+  return process.env.NODE_ENV = constants.ENV_STAGING;
 });
 
-gulp.task('setTestEnv', function() {
-    return process.env.NODE_ENV = constants.ENV_TEST;
+gulp.task('set-prod-env', function() {
+  return process.env.NODE_ENV = constants.ENV_PROD;
 });
 
-gulp.task('default', ['clean', 'setLocalEnv'], function () {
+gulp.task('default', ['clean', 'set-dev-env'], function () {
   gulp.start('serve');
 });
 
-gulp.task('prodEnv', ['clean', 'setProdEnv'], function () {
-  gulp.start('serve:dist');
+gulp.task('dev', ['clean', 'set-dev-env'], function () {
+  gulp.start('serve:dev');
 });
 
-gulp.task('testEnv', ['clean', 'setTestEnv'], function () {
-  gulp.start('serve:dist');
+gulp.task('staging', ['clean', 'set-staging-env'], function () {
+  gulp.start('serve:staging');
+});
+
+gulp.task('prod', ['clean', 'set-prod-env'], function () {
+  gulp.start('serve:prod');
 });

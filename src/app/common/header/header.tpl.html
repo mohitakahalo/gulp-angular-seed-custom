@@ -1,19 +1,41 @@
-<div class="profile-header">
-  <div class="logo">
-      <a href="#"><img/></a>
+<div class="app-header inline-flex">
+  <div class="tribe-logo">
+    <a href=""><img src="/images/profile/tribe_logo.png"/></a>
   </div>
   <div class="header-contents clearfix">
-    <div class="header-icon">
-      <a href="#">
-        <img/>
-        <span class="icon-label">Home</span>
-      </a>
-    </div>
-    <div class="header-icon">
-      <a>
-        <img/>
-        <span class="icon-label" data-toggle="modal" data-target="#credentialsModal" ng-click="openModal()">Login/Sign Up</span>
-      </a>
-    </div>
+      <div class="right-panel">
+          <div class="search-box">
+              <label class="search-label">
+                <input type="text" name="search" placeholder="Search" class="search-text"/>
+                <img src="/images/profile/search_icon.png"/>
+              </label>
+          </div>
+          <div class="add-request">
+              <span>
+                <img src="/images/profile/add_friend_icon.png"/>
+              </span>
+          </div>
+          <div class="notification-icon">
+              <span>
+                <img src="/images/profile/notifications_icon.png"/>
+              </span>
+          </div>
+          <div class="profile-icon-container">
+              <span class="icon-wrapper">
+                <img src="/images/default_user_image.png"/>
+              </span>
+              <button class="menu-dropdown-select" type="button">
+                <span>{{ user.first_name }}</span>
+                <span class="arrow-container">
+                  <img src="/images/down_arrow.png"/>
+                </span>
+                <ul class="menu-dropdown">
+                  <li>
+                    <a class="logout-btn" ng-click="headerCtrl.logoutUser()"> Logout </a>
+                  </li>
+                </ul>
+              </button>
+          </div>
+      </div>
   </div>
 </div>

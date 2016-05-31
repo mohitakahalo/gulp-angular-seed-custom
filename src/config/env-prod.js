@@ -8,8 +8,8 @@
   function env() {
     return {
       environment: 'prod',
-      platformHost: 'http://www.dodgetheprod.webapp',
-      platformPort: 8000
+      platformHost: 'http://www.tribe.com',
+      platformPort: 80
     }
   }
 

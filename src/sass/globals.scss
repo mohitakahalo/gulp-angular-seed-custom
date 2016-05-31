@@ -1,0 +1,346 @@
+$left-panel-width: 105px;
+$app-header-height: 60px;
+
+$color-black: #000000;
+$color-app-grey: #747474;
+$color-app-orange: #F18044;
+$common-border: #E7E7E7;
+$common-border-bottom: #DEDEDE;
+$form-input-color: #999999;
+$all-3: #333;
+$light-gray: #828282;
+$whitish-gray: #D6D6D6;
+$sea-bluish-green: #085e81;
+
+
+//common numbers
+$app-header-height: 60px;
+
+::-webkit-input-placeholder {
+  color: #CCC;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #CCC;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #CCC;
+}
+
+:-ms-input-placeholder {
+  color: #CCC;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+textarea:focus, input:focus {
+  border: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  display:none;
+  cursor: auto;
+}
+
+input[type="checkbox"] + label {
+  font: 13px 'Source Sans';
+  color: #747474;
+}
+
+input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 23px;
+  height: 13px;
+  vertical-align: middle;
+  background: url("/images/common/checkbox_default.png") no-repeat center center;
+  background-size: 12px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+
+input[type="checkbox"]:checked + label span {
+  background: url("/images/common/checkbox_selected.png") no-repeat center center;
+  background-size: 12px;
+  width: 23px;
+  height: 13px;
+}
+
+#app-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  display: none;
+  z-index: 10000001;
+  opacity: 0.95;
+  text-align: center;
+
+  .loader-image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    width: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .loader-text {
+    position: absolute;
+    top: calc(40% + 100px);
+    left: calc(50% - 40px);
+    font: 1.8rem 'Quicksand bold';
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.primary-btn {
+  outline: 0;
+  border: 0;
+  background-color: $color-app-orange;
+  border-radius: 0;
+  font: 1.6rem 'Source Sans';
+  padding: 16px 3.4rem;
+  color: #FFF;
+}
+
+.form-error {
+  font: 1.3rem 'Source Sans';
+  color: red;
+}
+
+.date-picker {
+  background: url('/images/common/calender_icon.png') no-repeat right center;
+  background-size: 20px 20px;
+  padding-right: 24px;
+}
+
+.select-styling { //Basic select styling that can be used across the app
+  width: 100%;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  background: url('../images/registerPage/down_arrow.png') no-repeat right;
+  font-size: 1.2rem;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex; 
+}
+
+.inline-flex {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dib {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-plus {
+  background: url('/images/dealRoom/plus_icon.png') no-repeat center center;
+  background-size: 100% auto;
+}
+
+.icon-like {
+  background: url('/images/dealRoom/hand_like_icon.png') no-repeat center center;
+  background-size: 100% auto;
+}
+
+.icon-download {
+  background: url('/images/common/download_icon.png') no-repeat center center;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.icon-delete {
+  background: url('/images/common/delete_icon.png') no-repeat center center;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.icon-up-arrow-light {
+  background: url('/images/common/down_arrow_light.png') no-repeat center center;
+  -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);        /* FF */
+  -o-transform: rotate(180deg);          /* Opera */
+  -ms-transform: rotate(180deg);         /* IE9 */
+  transform: rotate(180deg);  
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.icon-down-arrow-light {
+  background: url('/images/common/down_arrow_light.png') no-repeat center center;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.icon-up-arrow-bold {
+  background: url('/images/common/down_arrow_bold.png') no-repeat center center;
+  -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);        /* FF */
+  -o-transform: rotate(180deg);          /* Opera */
+  -ms-transform: rotate(180deg);         /* IE9 */
+  transform: rotate(180deg);  
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.icon-down-arrow-bold {
+  background: url('/images/common/down_arrow_bold.png') no-repeat center center;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  height: 100%;
+  width: 3.5rem;
+}
+
+.icon-del {
+  background: url("/images/common/delete_icon_white.png") no-repeat center center;
+  background-size: 100% auto;
+}
+
+/* Slick Carousel CSS */
+.slick-slide {
+  margin-right: 18px;
+}
+  
+.slick-slide:focus {
+  outline: 0;
+}
+
+.slick-prev {
+  left: 0;
+  background: url("/images/common/carousel_arrow_left.png") no-repeat 20% 25%, linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slick-next {
+  right: 0;
+  background: url("/images/common/carousel_arrow_right.png") no-repeat 20% 25%, linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.slick-arrow {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1001;
+  height: 100%;
+  width: 3.5rem;
+  top: 0;
+  opacity: 0.8;
+  background-size: 35px 54px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-toggle {
+
+  ul {
+    padding-left: 0;
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 2px;
+    font-size: 16px;
+
+    a {
+      font-family: 'Quicksand bold';
+      color: #000;
+      text-decoration: none;
+      padding-bottom: 6px;
+
+      &:hover {
+        border-bottom: 2px solid $color-app-orange;
+        color: $color-app-orange;
+      }
+
+      &.active {
+        border-bottom: 2px solid $color-app-orange;
+        color: $color-app-orange;
+      }
+    }
+  }
+}
+
+.tab-links {
+
+  .nav-tabs {
+    margin-top: 34px;
+  }
+  
+  .nav-tabs > li {
+    margin-bottom: 0px;
+  }
+
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: $color-app-orange;
+    background-color: transparent;
+    border: 0px;
+  }
+
+  li {
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    margin-right: 38px;
+
+    a {
+      font: bold 1.6rem 'Quicksand bold';
+      color: #333;
+      border: none;
+      padding: 5px 5px;
+    }
+
+    &:hover, &.active, {
+      border-bottom: 2px solid $color-app-orange;
+      a {
+        color: $color-app-orange;
+        background: transparent;
+        border: none;
+      }
+    }
+  }
+}
