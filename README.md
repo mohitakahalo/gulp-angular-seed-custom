@@ -8,19 +8,14 @@ This README would normally document whatever steps are necessary to get your app
 * Install npm, bower and gulp globally on your machine if you haven't already
 * Run the following commands to install dependencies 
 ```
-#!python
-
 $/repo-root/ npm install
-$/repo-root/ bower install
 ```
 
 
-* Run the following command to start gulp and begin serving your files on front end server
+* Run the following command to start gulp for serving files on local front end server
 ```
-#!python
-
 $/repo-root/ gulp
 
 ```
 
-hit localhost:3000 in your browser and start working...
+hit localhost:8001 in your browser and start working...
